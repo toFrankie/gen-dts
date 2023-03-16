@@ -1,0 +1,23 @@
+{
+  "name": "gen-dts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "run-s gen dts clean",
+    "gen": "node scripts/gen.js",
+    "clean": "rimraf .gen-tmp",
+    "dts": "tsc .gen-tmp/index.js --declaration --allowJs --emitDeclarationOnly --outDir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^11.1.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.4.0",
+    "typescript": "^4.9.5"
+  }
+}
